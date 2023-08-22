@@ -1,0 +1,20 @@
+version: '3'
+services:
+  servicio1:
+    image: valentina18
+    container_name: Containernginx
+    volumes:
+     - C:\Users\vales\OneDrive\Escritorio\Valentina\datadrive:/volumen
+    ports:
+      - 8969:80
+
+  service2:
+    image: mariadb
+    container_name: containermariadb
+    environment:
+      - MARIADB_ROOT_PASSWORD= mysecretpassword
+      - MARIADB_DATABASE= mydb
+      - MARIADB_USER= myuser
+      - MARIADB_PASSWORD= myuserpassword
+    ports:
+        - 3306:3306
